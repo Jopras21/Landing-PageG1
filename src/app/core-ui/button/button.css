@@ -50,7 +50,7 @@
 
 /* secondary */
 .secondary-button {
-  --color: #f6f3fa;
+  --color: rgb(230, 12, 12);
   font-family: inherit;
   display: inline-block;
   width: 8em;
@@ -67,6 +67,7 @@
   font-weight: 500;
   color: var(--color);
   cursor: pointer;
+  background-color: #f7f7f7;
 }
 
 .secondary-button:before {
@@ -80,7 +81,7 @@
 }
 
 .secondary-button:hover {
-  color: #3a0ca3;
+  color: #eeeeee;
 }
 
 .secondary-button:before {
@@ -95,6 +96,6 @@
 }
 
 .secondary-button:active:before {
-  background: #fff;
+  background: #b10c0c;
   transition: background 0s;
 }
