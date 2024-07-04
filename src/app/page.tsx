@@ -1,9 +1,10 @@
-import './footer/footer.css';
-import Navbar from './core-ui/footer/Navbar';
+import Navbar from './core-ui/navbar/Navbar';
+import Header from './header/Header';
 export default function Home() {
   return (
     <main>
-      <Footer />
+      <Navbar />
+      <Header />
     </main>
   );
 }
