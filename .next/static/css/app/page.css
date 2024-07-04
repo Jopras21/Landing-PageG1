@@ -1,0 +1,198 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/core-ui/text/text.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.header-text {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.normal-text {
+  font-family: 'DM Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.small-text {
+  font-family: 'DM Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.9rem;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/core-ui/footer/footer.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+footer {
+  width: auto;
+  background-color: rgb(241, 241, 241);
+  color: black;
+  padding: .5rem 2rem;
+}
+
+.lower-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.copyright-symbol {
+  color: #6558f5;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.lower-footer-connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-wrapper {
+  display: inline-flex;
+  list-style: none;
+  width: auto;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 4px 7px;
+  padding: 15px;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-wrapper .tooltip::before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.social-wrapper .icon:hover span,
+.social-wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.social-wrapper .linkedin:hover,
+.social-wrapper .linkedin:hover .tooltip,
+.social-wrapper .linkedin:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.social-wrapper .twitter:hover,
+.social-wrapper .twitter:hover .tooltip,
+.social-wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.social-wrapper .instagram:hover,
+.social-wrapper .instagram:hover .tooltip,
+.social-wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.linkedin {
+  width: 1.2rem;
+  height: auto;
+}
+
+.twitter {
+  width: 1.2rem;
+  height: auto;
+}
+
+.instagram {
+  width: 1.2rem;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .social-wrapper .icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .social-wrapper .icon {
+    width: 1rem;
+    height: 1rem;
+    font-size: 14px;
+  }
+
+  .lower-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+
+  .lower-footer-connect {
+    flex-direction: column;
+  }
+
+  .social-icon {
+    justify-content: center;
+  }
+}
+
