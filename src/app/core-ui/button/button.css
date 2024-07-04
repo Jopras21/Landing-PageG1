@@ -67,7 +67,7 @@
   font-weight: 500;
   color: var(--color);
   cursor: pointer;
-  background-color: #f7f7f7;
+  background-color: #efefef;
 }
 
 .secondary-button:before {
