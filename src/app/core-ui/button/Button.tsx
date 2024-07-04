@@ -1,5 +1,5 @@
 import './button.css';
-import {Text} from '../text/Text.tsx';
+import {Text} from '../text/Text';
 
 type Props = {
   type?: 'primary' | 'secondary';
@@ -18,12 +18,8 @@ export default function Button(props: Props) {
       className={type === 'primary' ? 'primary-button' : 'secondary-button'}
       style={style}
     >
-      <div className="button-animation email-icon">&#9993;</div>
-      <Text
-        size="small"
-        title={title}
-        style={{marginLeft: '3.2rem', fontSize: '1rem'}}
-      />
+      <div className="button-animation email-icon"></div>
+      <Text size="normal" title={title} style={{fontSize: '1rem'}} />
     </button>
   );
 }
