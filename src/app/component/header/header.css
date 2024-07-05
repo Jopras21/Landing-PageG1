@@ -1,6 +1,6 @@
 header {
   width: 100vw;
-  height: 60vh;
+  height: auto;
 }
 .container {
   position: relative;
@@ -12,6 +12,7 @@ header {
 header img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .overlay {
