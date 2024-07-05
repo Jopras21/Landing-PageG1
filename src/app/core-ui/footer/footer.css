@@ -3,6 +3,8 @@ footer {
   background-color: rgb(241, 241, 241);
   color: black;
   padding: .5rem 2rem;
+  position: relative;
+  display: block;
 }
 
 .lower-footer {
