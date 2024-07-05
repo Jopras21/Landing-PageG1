@@ -22,7 +22,7 @@
 .service {
   flex: 1 1 22%;
   margin: 10px;
-  height: 14rem;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -30,13 +30,13 @@
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .services-img {
   width: 8rem;
   height: 8rem;
-  background-color: #D42F13;
+  background-color: #d42f13;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -61,6 +61,7 @@
 
 .service:hover {
   transform: translateY(-10px);
+  filter: drop-shadow(5px 5px 10px #525252);
 }
 
 @media (max-width: 768px) {
