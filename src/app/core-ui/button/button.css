@@ -1,8 +1,9 @@
+/* Primary button */
 .primary-button {
   --color: #560bad;
   font-family: inherit;
   display: inline-block;
-  width: 8em;
+  width: 9em;
   height: 2.6em;
   line-height: 2.5em;
   margin: 20px;
@@ -48,7 +49,7 @@
   transition: background 0s;
 }
 
-/* secondary */
+/* Secondary button */
 .secondary-button {
   --color: rgb(230, 12, 12);
   font-family: inherit;
@@ -98,4 +99,13 @@
 .secondary-button:active:before {
   background: #b10c0c;
   transition: background 0s;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .primary-button, .secondary-button {
+    width: auto;
+    height: 6em;
+    font-size: .4em;
+  }
 }
