@@ -9,6 +9,8 @@ function scrollToId(id: string) {
   const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({behavior: 'smooth'});
+  } else {
+    console.warn(`Element with ID '${id}' not found.`);
   }
 }
 
@@ -26,17 +28,26 @@ export default function Navbar() {
   useEffect(() => {
     if (isSidebarOpen) {
       document.addEventListener('click', handleOutsideClick);
+      document.addEventListener('keydown', handleKeyDown);
     } else {
       document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener('keydown', handleKeyDown);
     }
     return () => {
       document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isSidebarOpen]);
 
   const handleOutsideClick = (event: MouseEvent) => {
     const sidebarElement = document.querySelector('.sidebar');
     if (sidebarElement && !sidebarElement.contains(event.target as Node)) {
+      closeSidebar();
+    }
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
       closeSidebar();
     }
   };
