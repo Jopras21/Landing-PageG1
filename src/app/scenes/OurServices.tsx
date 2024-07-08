@@ -3,7 +3,7 @@ import {Text} from '../core-ui/text/Text';
 
 export default function OurServices() {
   return (
-    <section className="our-services">
+    <section className="our-services" id="services">
       <Text size="header" title="LAYANAN KAMI" className="our-services-title" />
       <div className="service-container">
         <div className="service">
