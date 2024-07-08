@@ -5,6 +5,7 @@ type Props = {
   title: string;
   className?: string;
   style?: React.CSSProperties;
+  onClick?: () => void;
 };
 
 export function Text(props: Props) {
