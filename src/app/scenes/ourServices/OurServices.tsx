@@ -1,7 +1,7 @@
 import React from 'react';
 import './ourServices.css';
 import {Text} from '@/app/core-ui/text/Text';
-import Card from './CardServices';
+import CardServices from './CardServices';
 
 const OurServices: React.FC = () => {
   const servicesData = [
@@ -40,7 +40,7 @@ const OurServices: React.FC = () => {
       <Text size="header" title="LAYANAN KAMI" className="our-services-title" />
       <div className="service-container">
         {servicesData.map((service) => (
-          <Card
+          <CardServices
             key={service.id}
             imageSrc={service.imageSrc}
             subtitle={service.subtitle}
