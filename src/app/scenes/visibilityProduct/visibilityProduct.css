@@ -1,0 +1,117 @@
+.visibility-product {
+  width: auto;
+  height: auto;
+  padding: 40px 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.visibility-product-title {
+  height: auto;
+  width: 35%;
+  align-items: center;
+  text-align: center;
+}
+
+.visibility-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.visibility {
+  width: 25%;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: relative; 
+}
+
+.visibilitys-img {
+  width: 100%; 
+  height: 100%; 
+  background-color: #d42f13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0; 
+  overflow: hidden; 
+}
+
+.visibility img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  filter: blur(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.visibility:hover img {
+    filter: blur(1.5px);
+  }
+
+.visibility-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 0rem;
+  background: rgba(0, 0, 0, 0.429);
+  text-shadow: -1px 3px 8px rgba(255, 255, 255, 0.77);
+  color: honeydew;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+
+.visibility-text {
+  width: 80%;
+}
+
+.visibility:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(5px 5px 10px #525252fe);
+}
+
+.visibility:hover .visibility-overlay {
+  display: flex;
+  opacity: 1;
+}
+
+.visibility:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .visibility {
+    flex: 1 1 45%;
+  }
+
+  .visibility-product-title {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .visibility {
+    flex: 1 1 100%;
+  }
+}
