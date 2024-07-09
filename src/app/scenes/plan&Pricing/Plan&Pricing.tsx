@@ -51,7 +51,7 @@ const data = [
 
 const tableHeaders = ['', 'Standard', 'Premium', 'VIP'];
 
-const tableBodies = ['offers', 'desc1', {base: 'desc2'}, 'desc3'];
+const tableBodies = ['offers', 'desc1', 'desc2', 'desc3'];
 
 const App: React.FC = () => {
   return (

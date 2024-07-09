@@ -5,19 +5,19 @@ import {Text} from '@/app/core-ui/text/Text';
 export interface TableProps {
   data: Array<any>;
   tableHeaders: Array<string>;
-  tableBodies: Array<string | {base: string; icon?: string}>;
-  stickyHeader?: boolean; // Add a prop to control sticky header behavior
+  tableBodies: Array<string>;
+  stickyHeader?: boolean;
 }
 
 function getProperty(obj: any, key: string): any {
   return obj[key];
 }
 
-export default function PricingTable({
+export default function StickyHeadTable({
   data,
   tableHeaders,
   tableBodies,
-  stickyHeader = true, // Set a default value for stickyHeader
+  stickyHeader = true, 
 }: TableProps) {
   return (
     <div className="pricing-table">
@@ -26,8 +26,8 @@ export default function PricingTable({
           <thead>
             <tr>
               {tableHeaders.map((header, index) => (
-                <td key={index} className={index === 0 ? 'no-border' : ''}>
-                  {header}
+                <td key={index}>
+                  <Text size="normal" title={header} />
                 </td>
               ))}
             </tr>
@@ -36,12 +36,8 @@ export default function PricingTable({
             {data.map((rowData) => (
               <tr key={rowData.id}>
                 {tableBodies.map((body, index) => (
-                  <td key={index} className={index === 0 ? 'no-border' : ''}>
-                    {typeof body === 'string' ? (
-                      getProperty(rowData, body)
-                    ) : (
-                      <Text size="small" title={rowData[body.base]} />
-                    )}
+                  <td key={index} className={index === 0 ? 'left-aligned' : ''}>
+                    <Text size="small" title={getProperty(rowData, body)} />
                   </td>
                 ))}
               </tr>
