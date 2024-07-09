@@ -26,6 +26,8 @@
 .visibility {
   width: 25%;
   height: auto;
+  margin: .5rem;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
