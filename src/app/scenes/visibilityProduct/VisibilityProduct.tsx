@@ -24,7 +24,7 @@ export default function visibilityProduct() {
     },
   ];
   return (
-    <section className="visibility-product">
+    <section className="visibility-product" id='product'>
       <Text
         size="header"
         title="WUJUDKAN VISIBILITAS BRAND ANDA"

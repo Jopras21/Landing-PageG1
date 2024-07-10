@@ -3,7 +3,7 @@ import {Text} from '@/app/core-ui/text/Text';
 
 export default function ourTechnology() {
   return (
-    <div className="our-technology">
+    <section className="our-technology" id='Tech'>
       <Text
         size="header"
         title="TEKNOLOGI KAMI"
@@ -23,6 +23,6 @@ export default function ourTechnology() {
           <Text size="small" title="Rotasi Iklan" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

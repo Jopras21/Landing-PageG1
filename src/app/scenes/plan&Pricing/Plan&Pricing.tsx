@@ -55,7 +55,7 @@ const tableBodies = ['offers', 'desc1', 'desc2', 'desc3'];
 
 const App: React.FC = () => {
   return (
-    <section className="pricing-plan">
+    <section className="pricing-plan" id='pricing'>
       <Text size="header" title="RENCANA DAN HARGA" className="pricing-title" />
       <PricingTable
         data={data}
