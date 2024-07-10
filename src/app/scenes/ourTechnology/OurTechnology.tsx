@@ -4,16 +4,17 @@ import {Text} from '@/app/core-ui/text/Text';
 export default function ourTechnology() {
   return (
     <div className="our-technology">
-      <Text size="header" title="TEKNOLOGI KAMI" className='our-technology-title'/>
+      <Text
+        size="header"
+        title="TEKNOLOGI KAMI"
+        className="our-technology-title"
+      />
       <div className="our-technology-container">
         <div className="our-technology-img">
-          <img
-            src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
-            className=""
-          />
+          <img src="https://imgv3.fotor.com/images/cover-photo-image/AI-illustration-of-a-dragon-by-Fotor-AI-text-to-image-generator.jpg" />
         </div>
         <div className="our-technology-text">
-          <Text size="normal" title="Spesifikasi" style={{height:'3rem'}} />
+          <Text size="normal" title="Spesifikasi" style={{height: '3rem'}} />
           <Text size="small" title="Ukuran Layar" />
           <Text size="small" title="Jenis Iklan" />
           <Text size="small" title="Jam Oprasional Spot" />
