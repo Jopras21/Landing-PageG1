@@ -5,11 +5,12 @@ type Props = {
   title: string;
   className?: string;
   style?: React.CSSProperties;
+  href?: string;
   onClick?: () => void;
 };
 
 export function Text(props: Props) {
-  let {size = 'normal', title, className, style} = props;
+  let {size = 'normal', title, className, style, href} = props;
 
   const baseClass =
     size === 'header'
@@ -20,8 +21,10 @@ export function Text(props: Props) {
   const combinedClass = className ? `${baseClass} ${className}` : baseClass;
 
   return (
-    <span className={combinedClass} style={style}>
-      {title}
-    </span>
+    <a href={href}>
+      <span className={combinedClass} style={style} >
+        {title}
+      </span>
+    </a>
   );
 }
