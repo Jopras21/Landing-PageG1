@@ -5,17 +5,30 @@ import {Text} from '../text/Text';
 import Button from '../button/Button';
 import {useState, useEffect} from 'react';
 
-function scrollToId(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({behavior: 'smooth'});
-  } else {
-    console.warn(`Element with ID '${id}' not found.`);
-  }
-}
-
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [navClass, setNavClass] = useState('navbar');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      if (currentScrollPosition > scrollPosition) {
+        setNavClass('navbar navbar-up');
+      } else {
+        setNavClass('navbar navbar-down');
+      }
+
+      setScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -53,7 +66,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="navbar">
+    <div className={navClass}>
       <div className="hamburger-menu" onClick={toggleSidebar}>
         <button
           className={`menu ${isSidebarOpen ? 'opened' : ''}`}
@@ -101,37 +114,26 @@ export default function Navbar() {
             size="normal"
             title="Services"
             className="nav-text"
-            onClick={() => {
-              scrollToId('services');
-              closeSidebar();
-            }}
+            href="#services"
           />
           <Text
             size="normal"
             title="Prices"
             className="nav-text"
-            onClick={() => {
-              scrollToId('prices');
-              closeSidebar();
-            }}
+            href="#pricing"
           />
           <Text
             size="normal"
             title="Work"
             className="nav-text"
-            onClick={() => {
-              scrollToId('work');
-              closeSidebar();
-            }}
+            href="#product"
           />
+          <Text size="normal" title="Tech" className="nav-text" href="#tech" />
           <Text
             size="normal"
-            title="Tech"
+            title="Contact Us"
             className="nav-text"
-            onClick={() => {
-              scrollToId('tech');
-              closeSidebar();
-            }}
+            href="#contact"
           />
         </div>
       </div>
@@ -140,25 +142,21 @@ export default function Navbar() {
           size="normal"
           title="Services"
           className="nav-text"
-          onClick={() => scrollToId('services')}
+          href="#services"
         />
         <Text
           size="normal"
           title="Prices"
           className="nav-text"
-          onClick={() => scrollToId('prices')}
+          href="#pricing"
         />
+        <Text size="normal" title="Work" className="nav-text" href="#product" />
+        <Text size="normal" title="Tech" className="nav-text" href="#tech" />
         <Text
           size="normal"
-          title="Work"
+          title="Contact Us"
           className="nav-text"
-          onClick={() => scrollToId('work')}
-        />
-        <Text
-          size="normal"
-          title="Tech"
-          className="nav-text"
-          onClick={() => scrollToId('tech')}
+          href="#contact"
         />
       </div>
       <div className="login">
@@ -168,7 +166,7 @@ export default function Navbar() {
           onClick={() => {
             console.log('clicked');
           }}
-          style={{width: "6rem"}}
+          style={{width: '6rem'}}
         />
       </div>
     </div>
