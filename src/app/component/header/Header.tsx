@@ -10,11 +10,13 @@ export default function Header() {
           <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg" />
         </div>
         <div className="overlay">
-          <Text
-            size="header"
-            title="Kami siap meningkatkan visibilitas Branda anda"
-            style={{color: '#ffffff'}}
-          />
+          <div className="overlay-text">
+            <Text
+              size="header"
+              title="Kami siap meningkatkan visibilitas Branda anda"
+              style={{color: '#ffffff'}}
+            />
+          </div>
           <Button type="primary" title="Pesan Sekarang" />
         </div>
       </div>

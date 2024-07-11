@@ -8,10 +8,12 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
 }
 
 .header-img {
   width: 100%;
+  height: auto;
 }
 
 header img {
@@ -29,7 +31,11 @@ header img {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: #0000003c;
+  background-color: #0000005e;
+}
+
+.overlay-text {
+  width: 30%;
 }
 
 @media (max-width: 768px) {
