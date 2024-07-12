@@ -3,7 +3,7 @@ import {Text} from '@/app/core-ui/text/Text';
 
 export default function ourTechnology() {
   return (
-    <section className="our-technology" id='tech'>
+    <section className="our-technology" id='Tech'>
       <Text
         size="header"
         title="TEKNOLOGI KAMI"
