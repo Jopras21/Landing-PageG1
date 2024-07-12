@@ -9,9 +9,10 @@
 }
 
 .pricing-title {
-  height: 6rem;
-  justify-content: center;
+  display: block;
+  text-align: center;
   align-items: center;
+  height: 5rem;
 }
 
 .pricing-table {
@@ -49,6 +50,7 @@ td,
 th {
   height: 2.8rem;
   padding: 9px;
+  
 }
 
 tr td:first-child {
@@ -91,7 +93,6 @@ thead tr td {
 
   table {
     width: 100%;
-    
   }
   .pricing-plan {
     padding: 40px 0;
