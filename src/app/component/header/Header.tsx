@@ -1,8 +1,8 @@
 'use client';
 
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import './header.css';
-import {Text} from '../../core-ui/text/Text';
+import { Text } from '../../core-ui/text/Text';
 import Button from '../../core-ui/button/Button';
 
 const Header: React.FC = () => {
@@ -22,24 +22,13 @@ const Header: React.FC = () => {
       const bannerHeight = headerRef.current.offsetHeight;
       const parallaxRate = 0.5;
       const opacityRate = 1.2;
-      const scaleRate = 0.005;
 
-      imageRef.current.style.transform = `translateY(${
-        scrollY * parallaxRate
-      }px)`;
-      textRef.current.style.transform = `translateY(${
-        scrollY * parallaxRate * 0.8
-      }px) scale(${1 - scrollY * scaleRate})`;
-      buttonRef.current.style.transform = `translateY(${
-        scrollY * parallaxRate * 0.8
-      }px) scale(${1 - scrollY * scaleRate})`;
+      imageRef.current.style.transform = `translateY(${scrollY * parallaxRate}px)`;
+      textRef.current.style.transform = `translateY(${scrollY * parallaxRate * 0.8}px)`;
+      buttonRef.current.style.transform = `translateY(${scrollY * parallaxRate * 0.8}px)`;
 
-      textRef.current.style.opacity = `${
-        1 - (scrollY / bannerHeight) * opacityRate
-      }`;
-      buttonRef.current.style.opacity = `${
-        1 - (scrollY / bannerHeight) * opacityRate
-      }`;
+      textRef.current.style.opacity = `${1 - (scrollY / bannerHeight) * opacityRate}`;
+      buttonRef.current.style.opacity = `${1 - (scrollY / bannerHeight) * opacityRate}`;
     }
   };
 
@@ -64,7 +53,7 @@ const Header: React.FC = () => {
             <Text
               size="header"
               title="Kami siap meningkatkan visibilitas Brand anda"
-              style={{color: '#ffffff'}}
+              style={{ color: '#ffffff' }}
             />
           </div>
           <div className="overlay-button" ref={buttonRef}>
