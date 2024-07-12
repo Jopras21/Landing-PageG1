@@ -2,7 +2,7 @@
 .primary-button {
   --color: #560bad;
   font-family: inherit;
-  display: relative;
+  display: block;
   width: auto;
   height: 2.9em;
   line-height: 2.5em;
@@ -54,7 +54,7 @@
 .secondary-button {
   --color: rgb(230, 12, 12);
   font-family: inherit;
-  display: inline-block;
+  display: block;
   width: 8em;
   height: 2.6em;
   line-height: 2.5em;
