@@ -2,7 +2,7 @@
 .primary-button {
   --color: #560bad;
   font-family: inherit;
-  display: inline-block;
+  display: relative;
   width: auto;
   height: 2.9em;
   line-height: 2.5em;
