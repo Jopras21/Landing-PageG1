@@ -41,16 +41,10 @@ td:not(:first-child) {
   transition: all 0.3s ease-in-out;
 }
 
-td:not(:first-child):hover {
-  background-color: rgba(230, 230, 230, 0.064);
-  color: #282828;
-}
-
 td,
 th {
   height: 2.8rem;
   padding: 9px;
-  
 }
 
 tr td:first-child {
@@ -84,6 +78,22 @@ tr td:nth-child(4) {
 
 thead tr td {
   font-weight: bold;
+}
+
+td:hover,
+tr:hover {
+  background-color: rgba(255, 0, 0, 0.468);
+  color: #282828;
+}
+
+th:hover,
+tr td:hover {
+  background-color: rgba(255, 0, 0, 0.947);
+  color: #ffffff;
+}
+
+td:first-child :hover {
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
