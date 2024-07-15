@@ -6,6 +6,7 @@
   flex-direction: column;
   height: auto;
   position: relative;
+  background-color: #ffffff;
 }
 
 .pricing-title {
