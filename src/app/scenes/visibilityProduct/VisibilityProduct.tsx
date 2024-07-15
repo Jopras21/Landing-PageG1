@@ -25,11 +25,7 @@ export default function visibilityProduct() {
   ];
   return (
     <section className="visibility-product" id="product">
-      <Text
-        size="header"
-        title="WUJUDKAN VISIBILITAS BRAND ANDA"
-        className="visibility-product-title"
-      />
+      <Text size="header" title="WUJUDKAN VISIBILITAS BRAND ANDA" className="visibility-product-title" />
       <div className="visibility-product-container">
         {visibilityData.map((visibility) => (
           <VisibilityCard
