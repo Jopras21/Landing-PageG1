@@ -12,7 +12,7 @@ const OurTechnology: React.FC = () => {
     if (imageRef.current) {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const parallaxOffset = scrollTop * 0.2; 
+      const parallaxOffset = scrollTop * 0.1;
 
       imageRef.current.style.transform = `translateY(${parallaxOffset}px)`;
     }
@@ -20,23 +20,18 @@ const OurTechnology: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial setup
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const backgroundImageUrl =
-    'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg';
-
   return (
     <section className="our-technology" id="tech" ref={containerRef}>
-      <div
-        className="parallax-background"
-        ref={imageRef}
-        style={{backgroundImage: `url(${backgroundImageUrl})`}}
-      ></div>
+      <div className="parallax-background" ref={imageRef}>
+        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" />
+      </div>
       {/* Content */}
       <Text
         size="header"
