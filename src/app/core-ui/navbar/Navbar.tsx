@@ -1,14 +1,15 @@
 'use client';
 
 import './navbar.css';
-import {Text} from '../text/Text';
+import { Text } from '../text/Text';
 import Button from '../button/Button';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navClass, setNavClass] = useState('navbar');
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +66,30 @@ export default function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <div className={navClass}>
       <div className="hamburger-menu" onClick={toggleSidebar}>
@@ -113,26 +138,31 @@ export default function Navbar() {
           <Text
             size="normal"
             title="Services"
-            className="nav-text"
+            className={`nav-text ${activeSection === 'services' ? 'active' : ''}`}
             href="#services"
           />
           <Text
             size="normal"
             title="Prices"
-            className="nav-text"
+            className={`nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
             href="#pricing"
           />
           <Text
             size="normal"
             title="Work"
-            className="nav-text"
+            className={`nav-text ${activeSection === 'product' ? 'active' : ''}`}
             href="#product"
           />
-          <Text size="normal" title="Tech" className="nav-text" href="#tech" />
+          <Text
+            size="normal"
+            title="Tech"
+            className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
+            href="#tech"
+          />
           <Text
             size="normal"
             title="Contact Us"
-            className="nav-text"
+            className={`nav-text ${activeSection === 'contact' ? 'active' : ''}`}
             href="#contact"
           />
         </div>
@@ -141,21 +171,31 @@ export default function Navbar() {
         <Text
           size="normal"
           title="Services"
-          className="nav-text"
+          className={`nav-text ${activeSection === 'services' ? 'active' : ''}`}
           href="#services"
         />
         <Text
           size="normal"
           title="Prices"
-          className="nav-text"
+          className={`nav-text ${activeSection === 'pricing' ? 'active' : ''}`}
           href="#pricing"
         />
-        <Text size="normal" title="Work" className="nav-text" href="#product" />
-        <Text size="normal" title="Tech" className="nav-text" href="#tech" />
+        <Text
+          size="normal"
+          title="Work"
+          className={`nav-text ${activeSection === 'product' ? 'active' : ''}`}
+          href="#product"
+        />
+        <Text
+          size="normal"
+          title="Tech"
+          className={`nav-text ${activeSection === 'tech' ? 'active' : ''}`}
+          href="#tech"
+        />
         <Text
           size="normal"
           title="Contact Us"
-          className="nav-text"
+          className={`nav-text ${activeSection === 'contact' ? 'active' : ''}`}
           href="#contact"
         />
       </div>
@@ -166,7 +206,7 @@ export default function Navbar() {
           onClick={() => {
             console.log('clicked');
           }}
-          style={{width: '6rem'}}
+          style={{ width: '6rem' }}
         />
       </div>
     </div>
