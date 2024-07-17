@@ -4,13 +4,15 @@ import {Text} from '@/app/core-ui/text/Text';
 
 export default function ContactUs() {
   return (
-    <section className="contact-us" id='contact'>
-      <Text size="header" title="HUBUNGI KAMI" style={{height: '4rem'}} />
-      <Button
-        type="primary"
-        title="&#9993; gtrone@grosir.one"
-        className="contact-us-button"
-      />
+    <section className="contact-us" id="contact">
+      <div className="cantact-us-content">
+        <Text size="header" title="HUBUNGI KAMI" />
+        <Button
+          type="primary"
+          title="&#9993; gtrone@grosir.one"
+          className="contact-us-button"
+        />
+      </div>
     </section>
   );
 }
