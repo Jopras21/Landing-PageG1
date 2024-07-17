@@ -12,7 +12,7 @@ const OurTechnology: React.FC = () => {
     if (imageRef.current) {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const parallaxOffset = scrollTop * 0.1;
+      const parallaxOffset = scrollTop * 0.5;
 
       imageRef.current.style.transform = `translateY(${parallaxOffset}px)`;
     }
