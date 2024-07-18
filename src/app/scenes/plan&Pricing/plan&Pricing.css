@@ -56,11 +56,22 @@ tr td:first-child {
   width: 40%;
 }
 
+tr td:nth-child(2) {
+  background-color: rgb(245, 245, 245);
+}
+
+tr td:nth-child(3) {
+  background-color: rgb(255, 240, 211);
+}
+
+tr td:nth-child(4) {
+  background-color: rgb(255, 207, 162);
+}
+
 tr td:nth-child(2),
 tr td:nth-child(3),
 tr td:nth-child(4) {
   border: 1px solid #ffffff;
-  background-color: rgb(245, 245, 245);
   font-weight: 500;
   width: 20%;
 }
@@ -69,7 +80,8 @@ thead tr td {
   font-weight: bold;
 }
 
-thead tr:first-child:hover, thead td:first-child:hover {
+thead tr:first-child:hover,
+thead td:first-child:hover {
   background-color: #ffffff00;
 }
 
@@ -84,7 +96,7 @@ tr:hover {
 
 th:hover,
 tr td:hover {
-  background-color: rgba(255, 0, 0, 0.638);
+  background-color: rgba(255, 0, 0, 0.471);
   color: #ffffff;
 }
 
